@@ -1,0 +1,149 @@
+.container {
+  width: 100%;
+}
+
+.skipHeader {
+  background-size: cover;
+  color: white;
+  padding: 70px 20px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.skipHeaderFilter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(3px) brightness(70%);
+  z-index: -1;
+}
+
+.skipList {
+  width: 100%;
+}
+
+.detailsArrow {
+  width: 20px;
+  height: 20px;
+}
+
+.skipRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  border-radius: 8px;
+  margin-top: 10px;
+
+  background: #f6f6f6;
+  overflow: hidden;
+
+  &.selectedSkip {
+    background: #649478;
+    color: white;
+  }
+}
+
+.skipExpand{
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d9d9d9;
+  cursor: pointer;
+}
+
+.skipRowData{
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.skipName {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.skipPrice{
+  font-weight: bold;
+}
+
+.skipTitle {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.skipSubtitle {
+  font-size: 1.5rem;
+}
+
+.loader {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(90deg, #f3f3f3 25%, #ecebeb 50%, #f3f3f3 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.skipItem {
+  position: relative;
+  border: 2px solid white;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.skipImage {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.skipInfo {
+  h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .price {
+    font-weight: bold;
+    color: #27ae60;
+    font-size: 1.1rem;
+    margin-top: 10px;
+  }
+}
