@@ -38,6 +38,14 @@ const SkipSelector = ({ selectedContent, setSelectedContent }) => {
 
   const handleSelect = (skip) => setSelectedContent(skip);
 
+  const toggleInfo = (index) => {
+    if (infoOpen === index) {
+      setInfoOpen(null);
+    } else {
+      setInfoOpen(index);
+    }
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.skipHeader}>
@@ -62,21 +70,21 @@ const SkipSelector = ({ selectedContent, setSelectedContent }) => {
                   selectedContent?.id === skip.id ? styles.selectedSkip : ""
                 }`}
               >
-                <div className={styles.skipExpand}>
-                  {infoOpen === skipIndex && (
+                <div
+                  className={styles.skipExpand}
+                  onClick={() => toggleInfo(skipIndex)}
+                >
+                  {infoOpen === skipIndex ? (
                     <img
                       className={styles.detailsArrow}
                       src="/assets/down.png"
                       alt="↓"
-                      onClick={() => setInfoOpen(null)}
                     />
-                  )}
-                  {infoOpen !== skipIndex && (
+                  ) : (
                     <img
                       className={styles.detailsArrow}
                       src="/assets/right.png"
                       alt="→"
-                      onClick={() => setInfoOpen(skipIndex)}
                     />
                   )}
                 </div>
